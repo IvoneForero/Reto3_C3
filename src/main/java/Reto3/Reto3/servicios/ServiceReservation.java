@@ -15,21 +15,16 @@ public class ServiceReservation {
     public List<Reservation> allReservation(){
         return  rr.findAll();
     }
-
     public Reservation saveReservation(Reservation msg){
         return rr.save(msg);
     }
-
     public Reservation updateReservation(Reservation msg){
         return  rr.save(msg);
     }
-
     public void deleteReservation(Reservation msg){
         rr.delete(msg);
     }
-
     public Reservation findReservationById(Integer doc){ return rr.findById(doc).get(); }
-
     public void deleteReservationById(Integer doc){
         rr.deleteById(doc);
     }

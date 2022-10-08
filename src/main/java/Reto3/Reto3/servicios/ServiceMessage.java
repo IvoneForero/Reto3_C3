@@ -15,23 +15,18 @@ public class ServiceMessage {
     public List<Message> allMessage(){
         return  rm.findAll();
     }
-
     public Message saveMessage(Message msg){
         return rm.save(msg);
     }
-
     public Message updateMessage(Message msg){
         return  rm.save(msg);
     }
-
     public void deleteMessage(Message msg){
         rm.delete(msg);
     }
-
     public Message findMessageById(Integer doc){
         return  rm.findById(doc).get();
     }
-
     public void deleteMessageById(Integer doc){
         rm.deleteById(doc);
     }

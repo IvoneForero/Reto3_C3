@@ -15,11 +15,7 @@ public class ServiceBike {
     public List<Bike> allBike(){
         return  rb.findAll();
     }
-
-    public Bike saveBike(Bike bik){
-        return rb.save(bik);
-    }
-
+    public Bike saveBike(Bike bik){ return rb.save(bik); }
     public Bike updateBike(Bike bik){ return  rb.save(bik); }
     public void deleteBike(Bike bik){
         rb.delete(bik);
@@ -27,7 +23,6 @@ public class ServiceBike {
     public Bike findBikeById(Integer doc){
         return  rb.findById(doc).get();
     }
-
     public void deleteBikeById(Integer doc){
         rb.deleteById(doc);
     }

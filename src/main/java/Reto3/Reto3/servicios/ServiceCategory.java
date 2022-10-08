@@ -15,25 +15,19 @@ public class ServiceCategory {
     public List<Category> allCategory(){
         return  rc.findAll();
     }
-
     public Category saveCategory(Category cat){
         return rc.save(cat);
     }
-
     public Category updateCategory(Category cat){
         return  rc.save(cat);
     }
-
     public void deleteCategory(Category cat){
         rc.delete(cat);
     }
-
     public Category findCategoryById(Integer doc){
         return  rc.findById(doc).get();
     }
-
     public void deleteCategoryById(Integer doc){
         rc.deleteById(doc);
     }
-
 }

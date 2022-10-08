@@ -3,6 +3,7 @@ package Reto3.Reto3.controladores;
 import Reto3.Reto3.entidades.Client;
 import Reto3.Reto3.servicios.ServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class ControllerClient {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Client insertClient(@RequestBody Client cli) {
         return sc.saveClient(cli);
     }

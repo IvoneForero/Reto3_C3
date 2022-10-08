@@ -15,23 +15,18 @@ public class ServiceClient {
     public List<Client> allClient(){
         return  rc.findAll();
     }
-
     public Client saveClient(Client cli){
         return rc.save(cli);
     }
-
     public Client updateClient(Client cli){
         return  rc.save(cli);
     }
-
     public void deleteClient(Client cli){
         rc.delete(cli);
     }
-
     public Client findClientById(Integer doc){
         return  rc.findById(doc).get();
     }
-
     public void deleteClientById(Integer doc){
         rc.deleteById(doc);
     }

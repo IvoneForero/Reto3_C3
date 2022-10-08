@@ -3,6 +3,7 @@ package Reto3.Reto3.controladores;
 import Reto3.Reto3.entidades.Message;
 import Reto3.Reto3.servicios.ServiceMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class ControllerMessage {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message insertMessage(@RequestBody Message msg) {
         return sm.saveMessage(msg);
     }
