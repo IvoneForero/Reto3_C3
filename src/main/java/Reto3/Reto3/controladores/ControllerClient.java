@@ -26,11 +26,13 @@ public class ControllerClient {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Client updateClient(@RequestBody Client cli){
         return sc.updateClient(cli);
     }
 
     @DeleteMapping("/delete")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteClient(@RequestBody Client cli){
         sc.deleteClient(cli);
     }
@@ -41,6 +43,7 @@ public class ControllerClient {
     }
 
     @DeleteMapping("/{doc}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteClientById(@PathVariable("doc") int doc){
         sc.deleteClientById(doc);
     }

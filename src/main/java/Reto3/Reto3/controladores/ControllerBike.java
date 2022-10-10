@@ -26,11 +26,13 @@ public class ControllerBike {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Bike updateBike(@RequestBody Bike bik){
         return sb.updateBike(bik);
     }
 
     @DeleteMapping("/delete")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBike(@RequestBody Bike bik){
         sb.deleteBike(bik);
     }
@@ -41,6 +43,7 @@ public class ControllerBike {
     }
 
     @DeleteMapping("/{doc}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBikeById(@PathVariable("doc") int doc){
         sb.deleteBikeById(doc);
     }

@@ -26,11 +26,13 @@ public class ControllerCategory {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Category updateCategory(@RequestBody Category cat){
         return sc.updateCategory(cat);
     }
 
     @DeleteMapping("/delete")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategory(@RequestBody Category cat){
         sc.deleteCategory(cat);
     }
@@ -41,6 +43,7 @@ public class ControllerCategory {
     }
 
     @DeleteMapping("/{doc}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategoryById(@PathVariable("doc") int doc){
         sc.deleteCategoryById(doc);
     }

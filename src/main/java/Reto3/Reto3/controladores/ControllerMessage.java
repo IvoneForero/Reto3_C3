@@ -26,11 +26,13 @@ public class ControllerMessage {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message updateMessage(@RequestBody Message msg){
         return sm.updateMessage(msg);
     }
 
     @DeleteMapping("/delete")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteMessage(@RequestBody Message msg){
         sm.deleteMessage(msg);
     }
@@ -41,6 +43,7 @@ public class ControllerMessage {
     }
 
     @DeleteMapping("/{doc}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteMessageById(@PathVariable("doc") int doc){
         sm.deleteMessageById(doc);
     }
