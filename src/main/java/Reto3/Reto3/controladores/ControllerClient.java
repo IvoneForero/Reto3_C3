@@ -30,7 +30,7 @@ public class ControllerClient {
         return sc.updateClient(cli);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public void deleteClient(@RequestBody Client cli){
         sc.deleteClient(cli);
     }

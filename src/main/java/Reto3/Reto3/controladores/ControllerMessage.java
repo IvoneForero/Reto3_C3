@@ -25,12 +25,12 @@ public class ControllerMessage {
         return sm.saveMessage(msg);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public Message updateMessage(@RequestBody Message msg){
         return sm.updateMessage(msg);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public void deleteMessage(@RequestBody Message msg){
         sm.deleteMessage(msg);
     }

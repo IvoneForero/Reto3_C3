@@ -25,12 +25,12 @@ public class ControllerReservation {
         return sr.saveReservation(res);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public Reservation updateReservation(@RequestBody Reservation res){
         return sr.updateReservation(res);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public void deleteReservation(@RequestBody Reservation res){
         sr.deleteReservation(res);
     }

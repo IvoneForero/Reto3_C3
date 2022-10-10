@@ -30,7 +30,7 @@ public class ControllerCategory {
         return sc.updateCategory(cat);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public void deleteCategory(@RequestBody Category cat){
         sc.deleteCategory(cat);
     }

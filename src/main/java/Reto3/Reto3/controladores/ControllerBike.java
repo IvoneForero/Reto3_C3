@@ -30,7 +30,7 @@ public class ControllerBike {
         return sb.updateBike(bik);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public void deleteBike(@RequestBody Bike bik){
         sb.deleteBike(bik);
     }
